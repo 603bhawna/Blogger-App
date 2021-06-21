@@ -1,0 +1,18 @@
+<div class="container">
+    {{#if posts}}
+        {{#each posts}}
+            <div class="post">
+                <h1><a href="/posts/show/{{this._id}}">{{this.title}}</a></h1>
+                <p class="meta">
+                    Posted in
+                    <a href="/categories/show/{{this.category}}">{{this.category}}</a>
+                    <by>{{this.contributor}}</by>
+                    <on>{{this.date}}</on>
+                </p>
+                <img class="homeimg" src="/images/{{this.mainimage}}" alt="img">
+                {{{this.body}}}
+                <a class="more" href="/posts/show/{{this._id}}">See More</a>
+            </div>
+        {{/each}}
+    {{/if}}
+</div>

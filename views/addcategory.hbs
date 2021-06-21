@@ -1,0 +1,17 @@
+<div class="container">
+<h1>{{title}}</h1>
+<ul class="errors">
+    {{#if errors}}
+        {{#each error}}
+            <li class="alert alert-danger">{{error.msg}}</li>
+        {{/each}}
+    {{/if}}
+</ul>
+<form method="post" action="/categories/add">
+    <div class="form-group">
+        <label>Name</label>
+        <input class="form-control" name="name" type="text">
+    </div>
+    <input class="btn btn-default" type="submit" value="Save">
+</form>
+</div>
